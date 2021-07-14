@@ -1,6 +1,6 @@
 header{
     height: 30vh;
-    background-color: #110A2B;
+    background-color: #1a3263;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,14 +13,14 @@ header{
 }
 
 header h1{
-    color: yellow;
+    color: #fab95b;
     padding: 4%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .menu button{
-    color: #D60E3B;
-    background-color:#2a1869;
+    color: #f5564e;
+    background-color:#e8e2db;
     font-weight: bold;
     font-size: larger;
     cursor: pointer;
@@ -30,10 +30,10 @@ header h1{
 }
 
 .menu button:hover{
-    color: #D60E3B;
-    background-color: yellow;
+    color: #f5564e;
+    background-color: #fab95b;
 }
 
 .selected{
-    border-bottom: 2px solid #D60E3B;
+    border-bottom: 2px solid #f5564e;
 }

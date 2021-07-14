@@ -6,8 +6,8 @@ export default function Header(){
             <h1>Casa do Biscoito</h1>
             <div className="menu">
                 <button>Inicial</button>
-                <button><p className="selected">Biscoitos</p></button>
-                <button>Encomendas</button>
+                <button>Biscoitos</button>
+                <button><p className="selected">Encomendas</p></button>
                 <button>Contato</button>
                 <button>Login</button>
             </div>

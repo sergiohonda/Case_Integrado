@@ -11,7 +11,7 @@ export default function Biscoitos({data}){
                 <strong>Sabor:</strong> {data.sabor}
             </h2>
             <h2>
-                <strong>Preço:</strong> R${data.preco}
+                <strong>Quantidade:</strong> {data.quantidade} unidade(s)
             </h2>
         </div>
     )

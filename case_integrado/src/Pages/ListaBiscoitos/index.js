@@ -6,10 +6,10 @@ export default function ListaBiscoitos(){
 
     const [name, setName] = useState();
     const [flavor, setFlavor] = useState();
-    const [price, setPrice] = useState();
+    const [quantity, setQuantity] = useState();
 
     const addHandler=()=>{
-        const novoItem = {nome:name, sabor:flavor, preco:price}
+        const novoItem = {nome:name, sabor:flavor, quantidade:quantity}
         const novaLista = biscoitos.concat(novoItem)
         setBiscoitos(novaLista)
     }
@@ -18,17 +18,17 @@ export default function ListaBiscoitos(){
         {
             nome: "Gergelícia",
             sabor: "Gergelim com mel",
-            preco: "5,50"
+            quantidade: "2"
         },
         {
             nome: "Amendoamor",
             sabor: "Amendoim",
-            preco: "4,50"
+            quantidade: "4"
         },
         {
             nome: "Chocolover",
             sabor: "Chocolate com morango",
-            preco: "5,00"
+            quantidade: "5"
         }
     ]
 
@@ -52,7 +52,7 @@ export default function ListaBiscoitos(){
                 <div className="inputs">
                     <input placeholder="Nome" onChange={(e)=>setName(e.currentTarget.value)}/>
                     <input placeholder="Sabor" onChange={(e)=>setFlavor(e.currentTarget.value)}/>
-                    <input placeholder="Preço" onChange={(e)=>setPrice(e.currentTarget.value)}/>
+                    <input placeholder="Quantidade" onChange={(e)=>setQuantity(e.currentTarget.value)}/>
                 </div>
                 <button onClick={addHandler}>Adicionar biscoito</button>
             </div>
