@@ -1,0 +1,10 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.pagina-biscoitos{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20%;
+}

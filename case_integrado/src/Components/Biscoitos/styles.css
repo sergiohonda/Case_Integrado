@@ -1,0 +1,14 @@
+.bloco-biscoito{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bloco-biscoito h2{
+    color: red;
+    font-weight: bold;
+}
+
+h2 strong{
+    color: black ;
+}
