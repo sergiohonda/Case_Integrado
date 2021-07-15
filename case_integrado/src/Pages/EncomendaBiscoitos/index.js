@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Biscoitos from "../../Components/Biscoitos";
-import "./styles.css"
+import Header from "../../Components/Header";
+import "./styles.css";
 
-export default function ListaBiscoitos(){
+export default function EncomendaBiscoitos(){
 
     const [name, setName] = useState();
     const [flavor, setFlavor] = useState();
@@ -12,23 +13,26 @@ export default function ListaBiscoitos(){
         const novoItem = {nome:name, sabor:flavor, quantidade:quantity}
         const novaLista = biscoitos.concat(novoItem)
         setBiscoitos(novaLista)
+        setName('')
+        setFlavor('')
+        setQuantity('')
     }
 
     const biscoitosPadrao =[
         {
             nome: "Gergelícia",
             sabor: "Gergelim com mel",
-            quantidade: "2"
+            quantidade: 0
         },
         {
             nome: "Amendoamor",
             sabor: "Amendoim",
-            quantidade: "4"
+            quantidade: 0
         },
         {
             nome: "Chocolover",
             sabor: "Chocolate com morango",
-            quantidade: "5"
+            quantidade: 0
         }
     ]
 
@@ -42,6 +46,7 @@ export default function ListaBiscoitos(){
 
     return(
         <div className="principal">
+            <Header/>
             <div className="listaPrincipal">
                 <div className="titulo">
                     <h2>Biscoitos disponíveis:</h2>
@@ -50,9 +55,9 @@ export default function ListaBiscoitos(){
             </div>
             <div className="adder">
                 <div className="inputs">
-                    <input placeholder="Nome" onChange={(e)=>setName(e.currentTarget.value)}/>
-                    <input placeholder="Sabor" onChange={(e)=>setFlavor(e.currentTarget.value)}/>
-                    <input placeholder="Quantidade" onChange={(e)=>setQuantity(e.currentTarget.value)}/>
+                    <input placeholder="Nome" value={name} onChange={(e)=>setName(e.currentTarget.value)}/>
+                    <input placeholder="Sabor" value={flavor} onChange={(e)=>setFlavor(e.currentTarget.value)}/>
+                    <input placeholder="Quantidade" value={quantity} onChange={(e)=>setQuantity(e.currentTarget.value)}/>
                 </div>
                 <button onClick={addHandler}>Adicionar biscoito</button>
             </div>

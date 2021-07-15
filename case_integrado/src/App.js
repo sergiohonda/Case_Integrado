@@ -1,14 +1,11 @@
 import './App.css';
-import Header from './Components/Header';
-import ListaBiscoitos from './Pages/ListaBiscoitos';
+import Roteador from './Routes/routes';
+
 
 function App() {
   return (
     <div>
-      <Header/>
-      <div className="pagina-biscoitos">
-        <ListaBiscoitos/>
-      </div>
+      <Roteador/>
     </div>
   );
 }

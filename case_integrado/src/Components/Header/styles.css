@@ -21,17 +21,17 @@ header h1{
 .menu button{
     color: #f5564e;
     background-color:#e8e2db;
+    width: fit-content;
     font-weight: bold;
     font-size: larger;
     cursor: pointer;
     padding: 5px;
     border-radius: 10px;
-    border: none;
 }
 
 .menu button:hover{
-    color: #f5564e;
-    background-color: #fab95b;
+    color: #fab95b;
+    background-color: #f5564e;
 }
 
 .selected{
