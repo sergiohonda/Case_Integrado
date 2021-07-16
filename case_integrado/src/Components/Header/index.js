@@ -9,7 +9,9 @@ import { NavLink } from "react-router-dom"
 export default function Header(){
 
     const onPageStyle={
-        boxshadow: '2px 2px 2px #000000',
+        backgroundcolor:'#000000',
+        textdecorationcolor: '#000000',
+        boxshadow: '2px 2px 2px #000000'
     }
 
     return(
@@ -17,7 +19,7 @@ export default function Header(){
             <h1>Casa do Biscoito <GiCookie/></h1>
             <div className="menu">
                 <NavLink to='/' activeStyle={onPageStyle}><button><HiHome/> Inicial</button></NavLink>
-                <NavLink to='/' activeStyle={onPageStyle}><button><GiCookie/> Biscoitos</button></NavLink>
+                <NavLink to='/biscoitos' activeStyle={onPageStyle}><button><GiCookie/> Biscoitos</button></NavLink>
                 <NavLink to='/encomendas' activeStyle={onPageStyle}><button><p><FaBoxOpen/> Encomendas</p></button></NavLink>
                 <NavLink to='/' activeStyle={onPageStyle}><button><AiFillPhone/> Contato</button></NavLink>
                 <NavLink to='/' activeStyle={onPageStyle}><button><BiLogIn/> Login</button></NavLink>
