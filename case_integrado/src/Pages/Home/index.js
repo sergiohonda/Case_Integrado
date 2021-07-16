@@ -10,14 +10,19 @@ export default function Home(){
     return(
         <div className="principal">
             <Header/>
-            <div className="imagens">
-                <div className='box-imagens'>
-                    <img src={Biscoitos1} />
-                    <img src={Biscoitos2} />
+            <div className="listaPrincipal">
+                <div className="titulo">
+                    <h2>Menu Principal:</h2>
                 </div>
-                <div className='box-imagens'>
-                    <img src={Biscoitos3} />
-                    <img src={Biscoitos4} />
+                <div className="imagens">
+                    <div className='box-imagens'>
+                        <img src={Biscoitos1} />
+                        <img src={Biscoitos2} />
+                    </div>
+                    <div className='box-imagens'>
+                        <img src={Biscoitos3} />
+                        <img src={Biscoitos4} />
+                    </div>
                 </div>
             </div>
         </div>

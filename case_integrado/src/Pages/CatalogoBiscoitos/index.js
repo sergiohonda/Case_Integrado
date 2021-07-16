@@ -60,7 +60,7 @@ export default function CatalogoBiscoitos(){
         <div className="principal">
             <Header/>
             <div className="listaPrincipal">
-                <div className="titulo"> <h2>Menu:</h2> </div>
+                <div className="titulo"> <h2>Menu de biscoitos:</h2> </div>
                 <ul>{renderList}</ul>
             </div>       
         </div>
