@@ -12,7 +12,7 @@ export default function Home(){
             <Header/>
             <div className="listaPrincipal">
                 <div className="titulo">
-                    <h2>Menu Principal:</h2>
+                    <h2>Menu principal:</h2>
                 </div>
                 <div className="imagens">
                     <div className='box-imagens'>
