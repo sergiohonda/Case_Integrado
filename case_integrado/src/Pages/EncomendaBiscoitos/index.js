@@ -5,40 +5,48 @@ import "./styles.css";
 
 export default function EncomendaBiscoitos(){
 
-    const [name, setName] = useState();
-    const [flavor, setFlavor] = useState();
-    const [quantity, setQuantity] = useState();
-
-    const addHandler=()=>{
-        const novoItem = {nome:name, sabor:flavor, quantidade:quantity}
-        const novaLista = biscoitos.concat(novoItem)
-        setBiscoitos(novaLista)
-        setName('')
-        setFlavor('')
-        setQuantity('')
-    }
-
-    const biscoitosPadrao =[
+    const biscoitosDisponiveis =[
         {
-            nome: "Gergelícia",
-            sabor: "Gergelim com mel",
+            nome: "Espiral de sabores",
+            peso: 150,
             quantidade: 0
         },
         {
-            nome: "Amendoamor",
-            sabor: "Amendoim",
+            nome: "Amorzinho",
+            peso: 100,
             quantidade: 0
         },
         {
-            nome: "Chocolover",
-            sabor: "Chocolate com morango",
+            nome: "Amorzinho",
+            peso: 200,
             quantidade: 0
         }
     ]
 
-    const [biscoitos, setBiscoitos] = useState(biscoitosPadrao);
+    const renderList = biscoitosDisponiveis.map((item, index)=>(
+        <p key={index}>
+            <Biscoitos data={item}/>
+        </p>
+    ));
 
-    const renderList = biscoitos.map((item, index)=>(
+
+    const addCarrinho=()=>{
+        const indice = 0
+        while (indice > Object.keys(biscoitosDisponiveis).length){
+            if (biscoitosDisponiveis[{indice}].quantidade > 0){
+                const novoItem = {nome:biscoitosDisponiveis[{indice}].nome, peso:biscoitosDisponiveis[{indice}].peso, quantidade:biscoitosDisponiveis[{indice}].quantidade}
+                const novaLista = carrinho.concat(novoItem)
+                setCarrinho(novaLista)
+            }
+            const indice = indice + 1
+        }
+    }
+
+    const carrinhoVazio =[]
+
+    const [carrinho, setCarrinho] = useState(carrinhoVazio);
+
+    const carrinhoLista = carrinho.map((item, index)=>(
         <p key={index}>
             <Biscoitos data={item}/>
         </p>
@@ -52,14 +60,8 @@ export default function EncomendaBiscoitos(){
                     <h2>Biscoitos disponíveis:</h2>
                 </div>
                 <ul>{renderList}</ul>
-            </div>
-            <div className="adder">
-                <div className="inputs">
-                    <input placeholder="Nome" value={name} onChange={(e)=>setName(e.currentTarget.value)}/>
-                    <input placeholder="Sabor" value={flavor} onChange={(e)=>setFlavor(e.currentTarget.value)}/>
-                    <input placeholder="Quantidade" value={quantity} onChange={(e)=>setQuantity(e.currentTarget.value)}/>
-                </div>
-                <button onClick={addHandler}>Adicionar biscoito</button>
+                <button onClick={addCarrinho} className="botao-carrinho">Adicionar ao carrinho</button>
+                <ul>{carrinhoLista}</ul>
             </div>
         </div>
     )

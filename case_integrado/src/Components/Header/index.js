@@ -16,13 +16,13 @@ export default function Header(){
 
     return(
         <header>
-            <h1>Casa do Biscoito <GiCookie/></h1>
+            <h1><GiCookie/> Biscoitos da Karina <GiCookie/></h1>
             <div className="menu">
                 <NavLink to='/' activeStyle={onPageStyle}><button><HiHome/> Inicial</button></NavLink>
                 <NavLink to='/biscoitos' activeStyle={onPageStyle}><button><GiCookie/> Biscoitos</button></NavLink>
                 <NavLink to='/encomendas' activeStyle={onPageStyle}><button><p><FaBoxOpen/> Encomendas</p></button></NavLink>
-                <NavLink to='/' activeStyle={onPageStyle}><button><AiFillPhone/> Contato</button></NavLink>
-                <NavLink to='/' activeStyle={onPageStyle}><button><BiLogIn/> Login</button></NavLink>
+                <NavLink to='/contato' activeStyle={onPageStyle}><button><AiFillPhone/> Contato</button></NavLink>
+                <NavLink to='/cadastro' activeStyle={onPageStyle}><button><BiLogIn/> Login</button></NavLink>
             </div>
         </header>
     )

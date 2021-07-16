@@ -26,7 +26,7 @@ export default function Biscoitos({data}){
             <div className="info-biscoito">
                 <FaCookieBite color="#f5564e"/>
                 <h2> <strong>Nome:</strong> {data.nome} </h2>
-                <h2> <strong>Sabor:</strong> {data.sabor} </h2>
+                <h2> <strong>Peso:</strong> {data.peso} gramas</h2>
                 <h2> <strong>Quantidade:</strong> {quantidadeVar} unidade(s) </h2>
             </div>
             <div className="botoes-quantidade">
